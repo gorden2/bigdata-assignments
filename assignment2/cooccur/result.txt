@@ -1,0 +1,11 @@
+Question 3. How many distinct PMI pairs did you extract?
+106175
+Question 4. What's the pair (x, y) with the highest PMI? Write a sentence or two to explain what it is and why it has such a high PMI.
+shadrach;abednego: -1.14612803568
+Question 5. What are the three words that have the highest PMI with 'cloud' and 'love'? And what are the PMI values?
+cloud; tabernacle: -3.39008687542
+love; hate: -4.07518185462
+cloud; glory: -3.71760999102
+love; hermia: -4.31254277041
+cloud; fire: -3.78857488982
+love; commandments: -4.35138826656
