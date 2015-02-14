@@ -35,19 +35,19 @@
 </ul></strong></p>
 
 <h3>Wiki Data</h3>
-<h3>Question 1. What is the running time of the complete pairs implementation? What is the running time of the complete stripes implementation?</h3> 
+<h3>Question 6. What is the running time of the complete pairs implementation? What is the running time of the complete stripes implementation?</h3> 
 <p>It took <strong>25942.074s</strong> to run pairs with combiner and <strong>5227.513s</strong> to run stripes with combiner.</p>
 
-<h3>Question 2. Now disable all combiners. What is the running time of the complete pairs implementation now? What is the running time of the complete stripes implementation? </h3>
+<h3>Question 7. Now disable all combiners. What is the running time of the complete pairs implementation now? What is the running time of the complete stripes implementation? </h3>
 <p>I used the VM to run the code. It took <strong>infinite s</strong> to run pairs without combiner and <strong></strong> to run stripes without combiner.</p>
 
-<h3>Question 3. How many distinct PMI pairs did you extract?</h3>
+<h3>Question 8. How many distinct PMI pairs did you extract?</h3>
 <p>19105212</p>
 
-<h3>Question 4. What's the pair (x, y) with the highest PMI? Write a sentence or two to explain what it is and why it has such a high PMI.</h3>
+<h3>Question 9. What's the pair (x, y) with the highest PMI? Write a sentence or two to explain what it is and why it has such a high PMI.</h3>
 <p>It is <strong>départments,;départment):-1.0</strong>. The two terms look similar and both have symbols. The second one is the singular form of the first one. So it is highly possible that they appears together in a sentence to list department.</p>
 
-<h3>Question 5. What are the three words that have the highest PMI with 'cloud' and 'love'? And what are the PMI values?</h3>
+<h3>Question 10. What are the three words that have the highest PMI with 'cloud' and 'love'? And what are the PMI values?</h3>
 <p>They are:
 <strong><ul>
 <li>cloud; nebula.: -2.53609911468</li>
