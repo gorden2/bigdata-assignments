@@ -89,7 +89,7 @@ public class PairsPMI extends Configured implements Tool {
 		
 		for (int j=0; j < terms.length; j++){
 			  if (i!=j){
-				  PAIR.set(terms[i], terms[j]);
+				  PAIR.set(term, terms[j]);
 				  context.write(PAIR, ONE);
 				  }
 			  }
@@ -280,7 +280,7 @@ public class PairsPMI extends Configured implements Tool {
     FileSystem.get(getConf()).delete(outputDir, true);
 
     job.setNumReduceTasks(reduceTasks);
-
+	
     FileInputFormat.setInputPaths(job, new Path(inputPath));
     FileOutputFormat.setOutputPath(job, new Path(outputPath));
 
