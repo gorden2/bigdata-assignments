@@ -39,7 +39,7 @@
 <p>It took <strong>25942.074s</strong> to run pairs with combiner and <strong>5227.513s</strong> to run stripes with combiner.</p>
 
 <h3>Question 7. Now disable all combiners. What is the running time of the complete pairs implementation now? What is the running time of the complete stripes implementation? </h3>
-<p>I used the VM to run the code. It took <strong>infinite s</strong> to run pairs without combiner and <strong>2683.866s</strong> to run stripes without combiner.</p>
+<p>I used the VM to run the code. It took <strong>22200.217s</strong> to run pairs without combiner and <strong>2683.866s</strong> to run stripes without combiner.</p>
 
 <h3>Question 8. How many distinct PMI pairs did you extract?</h3>
 <p>19105212</p>
