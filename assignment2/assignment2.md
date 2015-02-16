@@ -28,7 +28,7 @@
 <strong><ul>
 <li>cloud; tabernacle: 1.80363585773</li>
 <li>cloud; glory: 1.47611274213</li>
-<li>cloud; fire: -3.78857488982</li>
+<li>cloud; fire: 1.40514784333</li>
 <li>love; hate: 1.40514784333</li>
 <li>love; hermia: 0.88117996274</li>
 <li>love; commandments: 0.84233446659</li>
