@@ -23,17 +23,17 @@
 <p>116759</p>
 
 <h3>Question 4. What's the pair (x, y) with the highest PMI? Write a sentence or two to explain what it is and why it has such a high PMI.</h3>
-<p>It is <strong>shadrach;abednego: -1.14612803568</strong>. The pair is two people's names in Bible. I think this may because these two people have a lot of common stories.(I am not familiar with Bible)</p>
+<p>It is <strong>shadrach;abednego: 4.04759469747</strong>. The pair is two people's names in Bible. I think this may because these two people have a lot of common stories.(I am not familiar with Bible)</p>
 
 <h3>Question 5. What are the three words that have the highest PMI with 'cloud' and 'love'? And what are the PMI values?</h3>
 <p>They are:
 <strong><ul>
-<li>cloud; tabernacle: -3.39008687542</li>
-<li>cloud; glory: -3.71760999102</li>
+<li>cloud; tabernacle: 1.80363585773</li>
+<li>cloud; glory: 1.47611274213</li>
 <li>cloud; fire: -3.78857488982</li>
-<li>love; hate: -4.07518185462</li>
-<li>love; hermia: -4.31254277041</li>
-<li>love; commandments: -4.35138826656</li>
+<li>love; hate: 1.40514784333</li>
+<li>love; hermia: 0.88117996274</li>
+<li>love; commandments: 0.84233446659</li>
 </ul></strong></p>
 
 <h3>Wiki Data</h3>
@@ -47,15 +47,15 @@
 <p>19105212</p>
 
 <h3>Question 9. What's the pair (x, y) with the highest PMI? Write a sentence or two to explain what it is and why it has such a high PMI.</h3>
-<p>It is <strong>départments,;départment):-1.0</strong>. The two terms look similar and both have symbols. The second one is the singular form of the first one. So it is highly possible that they appears together in a sentence to list department.</p>
-
+<p>It is <strong>départments,;départment):4.05949904516</strong>. The two terms look similar and both have symbols. The second one is the singular form of the first one. So it is highly possible that they appears together in a sentence to list department.</p>
+5.05949904516
 <h3>Question 10. What are the three words that have the highest PMI with 'cloud' and 'love'? And what are the PMI values?</h3>
 <p>They are:
 <strong><ul>
-<li>cloud; nebula.: -2.53609911468</li>
-<li>cloud; cloud.: -2.58112608449</li>
-<li>cloud; thunderstorm: -2.78887511578</li>
-<li>love; madly: -3.04844180355</li>
-<li>love; hurries: -3.16238515586</li>
-<li>love; potion: -3.18674450172</li>
+<li>cloud; nebula.: 2.52339993048</li>
+<li>cloud; cloud.: 2.47837296067</li>
+<li>cloud; thunderstorm: 2.27062392938</li>
+<li>love; madly: 2.01105724161</li>
+<li>love; hurries: 1.8971138893</li>
+<li>love; potion: 1.87275454344</li>
 </ul></strong></p>
