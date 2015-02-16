@@ -114,7 +114,10 @@ public class PairsPMI extends Configured implements Tool {
       // eliminate the dup words
 	  Set<String> ss = new HashSet<String>(Arrays.asList(s));
 	  String[] terms = ss.toArray(new String[ss.size()]);
-	  
+	  // number of Lines
+	  WORD.set("*");
+      context.write(WORD,ONE);
+      
       for (int i =0; i < terms.length; i++){
 	   String term = terms[i];
 	   if (term.length() == 0)
@@ -122,6 +125,7 @@ public class PairsPMI extends Configured implements Tool {
         WORD.set(term);
         context.write(WORD, ONE);
       }
+
     }
   }
 
@@ -198,9 +202,10 @@ public class PairsPMI extends Configured implements Tool {
       
 	  Double pmix = sidemap.get(key.getLeftElement());
 	  Double pmiy = sidemap.get(key.getRightElement());
+	  Double count = sidemap.get("*");
 	  Double pmixy = sum;
 	  if (pmixy>=10){
-			Double pmi = pmixy / (pmix * pmiy);
+			Double pmi = pmixy * count/ (pmix * pmiy);
 			Double logpmi = Math.log10(pmi);
 			PMI.set(logpmi);
 			context.write(key, PMI);

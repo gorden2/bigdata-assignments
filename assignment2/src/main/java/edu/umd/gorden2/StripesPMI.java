@@ -155,10 +155,10 @@ public class StripesPMI extends Configured implements Tool {
         Double pmix = (double) sidemap.get(key.toString());
         Double pmiy = (double) sidemap.get(keyy);
         Double pmixy = (double) map.get(keyy);
-
+		Double count = (double) sidemap.get("*");
 
         if (pmixy>=10){
-			Double pmi = pmixy / (pmix * pmiy);
+			Double pmi = pmixy* count / (pmix * pmiy);
 			Double logpmi = Math.log10(pmi);
 			KEY.set(key.toString()+";"+keyy);
 			PMI.set(logpmi);
@@ -180,7 +180,9 @@ public class StripesPMI extends Configured implements Tool {
         throws IOException, InterruptedException {
       String line = ((Text) value).toString();
       String[] s = line.trim().split("\\s+");
-      
+      // number of Lines
+	  WORD.set("*");
+      context.write(WORD,ONE);
       // eliminate the dup words
 	  Set<String> ss = new HashSet<String>(Arrays.asList(s));
 	  String[] terms = ss.toArray(new String[ss.size()]);
