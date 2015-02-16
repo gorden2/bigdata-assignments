@@ -9,6 +9,8 @@
 <p>The input of both jobs are the set of the initial input.</p>
 </ul>
 
+<strong>Note: In order to simplify the PMI calculation(Actually, I am not sure about the definition), I used the count of elements as its probability. The acutally value of PMI is just the value I displayed plus log10(N), where N is a constant value.<strong>
+
 <h3>bible+shakes data</h3>
 <h3>Question 1. What is the running time of the complete pairs implementation? What is the running time of the complete stripes implementation?</h3> 
 <p>I used the VM to run the code. It took <strong>141.243s</strong> to run pairs with combiner and <strong>85.013s</strong> to run stripes with combiner.</p>
