@@ -89,7 +89,6 @@ public class BuildInvertedIndex extends Configured implements Tool {
       Reducer<PairOfStringInt, IntWritable, Text, PairOfWritables<IntWritable, ArrayListWritable<PairOfInts>>> {
     private final static IntWritable DF = new IntWritable();
 	private final static Text TERM = new Text();
-	int df;
 	ArrayListWritable<PairOfInts> postings = new ArrayListWritable<PairOfInts>();
 	String pre = "";
 	
@@ -103,8 +102,11 @@ public class BuildInvertedIndex extends Configured implements Tool {
       while (iter.hasNext()) {
         sum += iter.next().get();
       }
+	  System.out.println("initial:");
+	  System.out.println(pre);
 	  
-	  if (key.getLeftElement()!=pre && pre!=""){
+	  if (!key.getLeftElement().equals(pre) && pre!=""){
+		  System.out.println("new:");
 		  TERM.set(pre); 
 		  DF.set(postings.size());
 		  context.write(TERM, new PairOfWritables<IntWritable, ArrayListWritable<PairOfInts>>(DF, postings));
@@ -113,6 +115,7 @@ public class BuildInvertedIndex extends Configured implements Tool {
 	  post.set(key.getRightElement(),sum);
 	  postings.add(post);
 	  pre = key.getLeftElement();
+	  System.out.println("pre:");
 	  System.out.println(pre);
     }
 	
