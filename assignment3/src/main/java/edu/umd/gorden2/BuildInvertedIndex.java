@@ -91,6 +91,7 @@ public class BuildInvertedIndex extends Configured implements Tool {
 	private final static Text TERM = new Text();
 	ArrayListWritable<PairOfInts> postings = new ArrayListWritable<PairOfInts>();
 	String pre = "";
+	int did = 0;
 	
     @Override
     public void reduce(PairOfStringInt key, Iterable<IntWritable> values, Context context)
@@ -102,22 +103,29 @@ public class BuildInvertedIndex extends Configured implements Tool {
       while (iter.hasNext()) {
         sum += iter.next().get();
       }
-	  System.out.println("initial:");
-	  System.out.println(pre);
 	  
 	  if (!key.getLeftElement().equals(pre) && pre!=""){
-		  System.out.println("new:");
 		  TERM.set(pre); 
 		  DF.set(postings.size());
 		  context.write(TERM, new PairOfWritables<IntWritable, ArrayListWritable<PairOfInts>>(DF, postings));
 		  postings.clear();
+		  did = 0;
 		  }
-	  post.set(key.getRightElement(),sum);
+	  did = key.getRightElement() - did;
+	  post.set(did,sum);
 	  postings.add(post);
 	  pre = key.getLeftElement();
-	  System.out.println("pre:");
-	  System.out.println(pre);
+
     }
+	
+	@Override
+	protected void cleanup(Context context)
+        throws IOException,InterruptedException{
+	  TERM.set(pre); 
+	  DF.set(postings.size());
+	  context.write(TERM, new PairOfWritables<IntWritable, ArrayListWritable<PairOfInts>>(DF, postings));					   
+						   
+		}
 	
   }
 
