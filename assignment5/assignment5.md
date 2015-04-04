@@ -5,7 +5,6 @@ Since the column qualifier is the document id, adding new documents needs a scan
 </p>
 <br/>
 <h3>2. How would you fix it? </h3>
-<p>Schema Design: </p>
 <p>
 First, make the "Docid" as the row key. If the document id is the url of the website, then reverse the url. For example: "www.umd.edu" will become "edu.umd.www". 
 In that case, similar websites will come together.
