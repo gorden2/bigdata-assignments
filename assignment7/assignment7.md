@@ -37,7 +37,7 @@ f2 = order f2 by date;
 store f2 into 'pig2';
 <br/>
 <h3>Spark #1</h3>
-<br/>val data0 = sc.textFile("/shared/tweets2011.txt")
+val data0 = sc.textFile("/shared/tweets2011.txt")
 <br/>val data = data0.filter(_.split("\\t").length==4)
 <br/>val dataset1 = data.filter(l => (l.split("\\t")(2).split(" ")(1)=="Jan" && l.split("\\t")(2).split(" ")(2).toInt>=23))
 <br/>val dataset2 = data.filter(l => (l.split("\\t")(2).split(" ")(1)=="Feb" && l.split("\\t")(2).split(" ")(2).toInt<=8))
@@ -48,8 +48,8 @@ store f2 into 'pig2';
 <br/>val results = result.sortBy(x => (x._1.split(" ")(0),x._1.split(" ")(1)))
 <br/>results.saveAsTextFile("result1")
 <br/>
-<h3>Spark</h3>
-<br/>val data0 = sc.textFile("/shared/tweets2011.txt")
+<h3>Spark #2</h3>
+val data0 = sc.textFile("/shared/tweets2011.txt")
 <br/>val data = data0.filter(_.split("\\t").length==4)
 <br/>val edata = data.filter(l => l.split("\\t")(3).matches(".*([Ee][Gg][Yy][Pp][Tt]|[Cc][Aa][Ii][Rr][Oo]).*"))
 <br/>val edataset1 = edata.filter(l => (l.split("\\t")(2).split(" ")(1)=="Jan" && l.split("\\t")(2).split(" ")(2).toInt>=23))
